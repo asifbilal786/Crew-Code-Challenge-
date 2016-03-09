@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="twitterCell" id="KGk-i7-Jjw" customClass="TweetCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JH-xy-avU" userLabel="User View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-2M-PWt" userLabel="User Image">
+                                <rect key="frame" x="10" y="5" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="ysg-N4-J8s"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKN-X5-eF7" userLabel="Username">
+                                <rect key="frame" x="64" y="5" width="186" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG5-0H-xLu">
+                                <rect key="frame" x="260" y="5" width="50" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4ab-YJ-sEp"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="buttonHandler:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3hd-kN-tHE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bG5-0H-xLu" secondAttribute="trailing" constant="10" id="1ph-Nj-ao9"/>
+                            <constraint firstAttribute="height" constant="54" id="AEg-iI-sTE"/>
+                            <constraint firstItem="pKN-X5-eF7" firstAttribute="leading" secondItem="XlE-2M-PWt" secondAttribute="trailing" constant="10" id="Enb-cU-8mi"/>
+                            <constraint firstAttribute="bottom" secondItem="pKN-X5-eF7" secondAttribute="bottom" constant="5" id="GFw-xs-QVw"/>
+                            <constraint firstItem="XlE-2M-PWt" firstAttribute="leading" secondItem="5JH-xy-avU" secondAttribute="leading" constant="10" id="Luo-9J-iGh"/>
+                            <constraint firstItem="bG5-0H-xLu" firstAttribute="leading" secondItem="pKN-X5-eF7" secondAttribute="trailing" constant="10" id="Wnr-oL-5lP"/>
+                            <constraint firstItem="XlE-2M-PWt" firstAttribute="top" secondItem="5JH-xy-avU" secondAttribute="top" constant="5" id="gjj-yk-seE"/>
+                            <constraint firstAttribute="bottom" secondItem="bG5-0H-xLu" secondAttribute="bottom" constant="5" id="jW3-zq-fdC"/>
+                            <constraint firstItem="bG5-0H-xLu" firstAttribute="top" secondItem="5JH-xy-avU" secondAttribute="top" constant="5" id="pQ1-2F-GMk"/>
+                            <constraint firstAttribute="bottom" secondItem="XlE-2M-PWt" secondAttribute="bottom" constant="5" id="udX-MJ-94Y"/>
+                            <constraint firstItem="pKN-X5-eF7" firstAttribute="top" secondItem="5JH-xy-avU" secondAttribute="top" constant="5" id="y6l-4I-tO1"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Hello This is testing Label." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="Zfe-uz-ADd" userLabel="Tweet Label">
+                        <rect key="frame" x="10" y="64" width="300" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zfe-uz-ADd" firstAttribute="top" secondItem="5JH-xy-avU" secondAttribute="bottom" constant="10" id="Tqd-wD-ohU"/>
+                    <constraint firstAttribute="trailing" secondItem="5JH-xy-avU" secondAttribute="trailing" id="dJN-vD-j9u"/>
+                    <constraint firstAttribute="bottom" secondItem="Zfe-uz-ADd" secondAttribute="bottom" constant="10" id="dTe-qn-gNw"/>
+                    <constraint firstAttribute="trailing" secondItem="Zfe-uz-ADd" secondAttribute="trailing" constant="10" id="idX-LO-rPy"/>
+                    <constraint firstItem="Zfe-uz-ADd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="sFG-Cu-248"/>
+                    <constraint firstItem="5JH-xy-avU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tyc-cT-vl8"/>
+                    <constraint firstItem="5JH-xy-avU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wRg-Y4-2rk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionButton" destination="bG5-0H-xLu" id="ANs-Wd-xIx"/>
+                <outlet property="tweetText" destination="Zfe-uz-ADd" id="gIy-i2-krX"/>
+                <outlet property="userImage" destination="XlE-2M-PWt" id="YV1-92-rov"/>
+                <outlet property="username" destination="pKN-X5-eF7" id="21U-MI-kbp"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
